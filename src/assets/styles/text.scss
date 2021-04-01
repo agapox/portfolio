@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+* {
+  font-family: 'Sarabun', sans-serif;
+}
+
+@mixin font-size-transition {
+  transition: font-size .2s ease-in-out;
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 4rem;
+  @include font-size-transition;
+  @media screen and (max-width: 500px) {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  @include font-size-transition;
+  @media screen and (max-width: 500px) {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  @include font-size-transition;
+  @media screen and (max-width: 500px) {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+h4 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  @include font-size-transition;
+  @media screen and (max-width: 500px) {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+}
+
+h5 {
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+  @include font-size-transition;
+  @media screen and (max-width: 500px) {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+}
+
+h6 {
+  font-size: 1rem;
+  line-height: 1.3rem;
+  @include font-size-transition;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.3rem;
+  @include font-size-transition;
+}
