@@ -1,10 +1,29 @@
-<p>home works!</p>
-<h1>h1</h1>
-<h2>h2</h2>
-<h3>h3</h3>
-<h4>h4</h4>
-<h5>h5</h5>
-<h6>h6</h6>
+<div id="home">
+  <div class="person__details">
 
+    <h1 class="person__name text-center color-light">José Agapito Ramírez</h1>
 
-<p>Paragraph</p>
+    <h4 class="person__ocupations text-center color-light">{{ person.ocupations.join(' | ') }}</h4>
+
+    <div class="person__fields" *ngIf="person.fields">
+      <div class="badge field color-light" *ngFor="let field of person.fields">{{ field }}</div>
+    </div>
+
+    <div *ngIf="person.descriptions" class="person__description">
+      <p *ngFor="let desc of person.descriptions"
+        class="color-light">
+        {{ desc }}
+      </p>
+    </div>
+
+    <div class="person__social-media text-center" *ngIf="person.socialMedia">
+      <a class="person__social-media__item color-light"
+        *ngFor="let item of person.socialMedia"
+        [href]="item.url"
+        target="_blank">
+        <em [class]="item.iconClass"></em>
+      </a>
+    </div>
+
+  </div>
+</div>

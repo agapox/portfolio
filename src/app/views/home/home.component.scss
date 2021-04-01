@@ -1,0 +1,93 @@
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 8px 16px;
+  background: transparent;
+  border-bottom: 1px solid rgb(222 222 222 / 33%);
+}
+
+#home {
+  $colors: rgb(68, 132, 206), rgb(26, 215, 192), rgb(255, 155, 17), rgb(155, 89, 182), rgb(255, 127, 127), rgb(124, 77, 124);
+  display: flex;
+  background: linear-gradient(136deg, $colors) 0% 0% / 1200% 1200%;
+  animation: bgAnimation 70s ease infinite;
+
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  min-height: 100vh;
+
+  .person {
+    &__details {
+      max-width: 700px;
+      width: 90%;
+    }
+    &__name {
+      margin-bottom: 16px;
+    }
+    &__ocupations {
+      margin-top: 0;
+    }
+    &__fields {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__social-media {
+      a {
+        &:visited {
+          color: inherit;
+
+          em {
+            color: inherit;
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes bgAnimation {
+    0% {
+      background-position: 0 7%
+    }
+    50% {
+      background-position: 100% 94%
+    }
+    100% {
+      background-position: 0 7%
+    }
+  }
+}
+
+.badge {
+  text-align: center;
+  padding: 2px 16px;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: transparent;
+  border-radius: 200px;
+  font-size: 14px;
+  margin: 4px;
+  font-weight: 800;
+  color: #ffffff;
+  // color: rgb(68, 132, 206);
+  // animation: badgeAnim 70s ease infinite;
+
+  @keyframes badgeAnim {
+    $colors: rgb(68, 132, 206), rgb(26, 215, 192), rgb(255, 155, 17), rgb(155, 89, 182), rgb(255, 127, 127), rgb(124, 77, 124);
+    @each $color in $colors {
+      $i: index($colors, $color) - 1;
+      $keyframeSel: $i/length($colors)*50%;
+      #{$keyframeSel} {
+        color: $color;
+      }
+      $keyframeSel2: 100% - $i/length($colors)*50%;
+      #{$keyframeSel2} {
+        color: $color;
+      }
+    }
+  }
+}
