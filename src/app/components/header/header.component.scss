@@ -58,6 +58,7 @@
       &#navbar-mobile {
         em {
           color: #ffffff;
+          cursor: pointer;
         }
         .navbar__menu {
           z-index: 999;
@@ -77,6 +78,7 @@
             right: 16px;
             top: 16px;
             position: absolute;
+            cursor: pointer;
             em {
               color: #0077ca;
             }
@@ -92,6 +94,11 @@
               text-decoration: none;
               background-color: #ffffff;
               transition: background-color 5s ease-in-out;
+              cursor: pointer;
+
+              &:focus {
+                outline: none;
+              }
               &.menu-active {
                 background-color: #0077ca;
                 color: #ffffff;
