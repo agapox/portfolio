@@ -68,3 +68,18 @@ p {
   line-height: 1.3rem;
   @include font-size-transition;
 }
+
+.text-weight {
+  &--light {
+    font-weight: 300;
+  }
+  &--regular {
+    font-weight: 400;
+  }
+  &--semibold {
+    font-weight: 600;
+  }
+  &--bold {
+    font-weight: 700;
+  }
+}

@@ -7,15 +7,15 @@
     <h4 class="person__ocupations text-center color-light">{{ person.ocupations.join(' | ') }}</h4>
 
     <div class="person__fields" *ngIf="person.fields">
-      <div class="badge field color-light" *ngFor="let field of person.fields">{{ field }}</div>
+      <div class="badge field color-light text-weight--semibold" *ngFor="let field of person.fields">{{ field }}</div>
     </div>
 
-    <div *ngIf="person.descriptions" class="person__description">
+    <!-- <div *ngIf="person.descriptions" class="person__description">
       <p *ngFor="let desc of person.descriptions"
         class="color-light">
         {{ desc }}
       </p>
-    </div>
+    </div> -->
 
     <div class="person__social-media text-center" *ngIf="person.socialMedia">
       <a class="person__social-media__item color-light"

@@ -9,7 +9,7 @@ export class HomeComponent implements OnInit {
 
   person = {
     name: 'José Agapito Ramírez',
-    fields: ['Agile', 'Scrum', 'UI', 'FrontEnd', 'Angular', 'React','Javascript'],
+    fields: ['Agile', 'Scrum', 'UX/UI', 'FrontEnd', 'Angular', 'React', 'Javascript', 'NodeJs', 'HTML5', 'CCS3', 'SASS', 'LESS'],
     descriptions: [
       `Blockchain and cryptocurrency enthusiast. Entrepreneur, passionate about business,
         its processes and their operation. I am a very empathic person, which makes me

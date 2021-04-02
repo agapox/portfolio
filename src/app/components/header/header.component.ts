@@ -8,14 +8,16 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
+  public mobileMenuOpen = false;
+
   navbarItems = [
     {
       name: 'home',
-      url: ''
+      url: '/home'
     },
     {
       name: 'about',
-      url: 'about'
+      url: '/about'
     },
     {
       name: 'resume',
@@ -42,8 +44,13 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  goTo(url: string) {
-    this.router.navigate([url]);
+  toggleMobileMenu() {
+    this.mobileMenuOpen = !this.mobileMenuOpen;
+    if (this.mobileMenuOpen) {
+      console.log("menú abierto")
+    } else {
+      console.log("menú cerrado")
+    }
   }
 
 }

@@ -4,7 +4,7 @@
   </div>
   <nav id="navbar" role="navigation" aria-label="Main">
     <ul>
-      <li *ngFor="let nav of navbarItems" routerLinkActive="menu-active">
+      <li *ngFor="let nav of navbarItems; let i = index" routerLinkActive="menu-active">
         <a [routerLink]="[nav.url]">
           {{ nav.name }}
         </a>
@@ -12,12 +12,19 @@
     </ul>
   </nav>
   <nav id="navbar-mobile" role="navigation" aria-label="Main">
-    <ul>
-      <li *ngFor="let nav of navbarItems">
-        <a (click)="goTo(nav.url)" routerLinkActive="active">
+    <a (click)="toggleMobileMenu()">
+      <em class="fas fa-bars fa-lg"></em>
+    </a>
+    <div class="backdrop" [ngClass]="{ 'active': mobileMenuOpen }" (click)="toggleMobileMenu()"></div>
+    <div class="navbar__menu" [ngClass]="{ 'open': mobileMenuOpen }">
+      <a class="btn-close-menu" (click)="toggleMobileMenu()">
+        <em class="fas fa-times fa-lg"></em>
+      </a>
+      <ul>
+        <li *ngFor="let nav of navbarItems" routerLinkActive="menu-active" [routerLink]="[nav.url]">
           {{ nav.name }}
-        </a>
-      </li>
-    </ul>
+        </li>
+      </ul>
+    </div>
   </nav>
 </header>
