@@ -3,6 +3,9 @@
 @import './assets/styles/text.scss';
 @import './assets/styles/helpers.scss';
 
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;

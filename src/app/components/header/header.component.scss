@@ -1,0 +1,64 @@
+@import '../../../assets/styles/variables.scss';
+:host {
+  #header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 8px 16px;
+    background: transparent;
+    border-bottom: 1px solid rgb(255, 255, 255, .2);
+
+    nav {
+      &#navbar {
+        ul {
+          margin: 0;
+          list-style: none;
+          padding: 0;
+          li {
+            display: inline-block;
+            padding: 2px 16px;
+            border-bottom: 2px solid transparent;
+            background: linear-gradient(to right, $color_main_menu_hover, $color_main_menu_hover 50%, $color_main_menu 50%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% 100%;
+            background-position: 100%;
+            transition: background-position 275ms ease;
+            text-decoration: none;
+            &:hover {
+              background-position: 0 100%;
+            }
+            &.menu-active {
+              border-color: #ffffff;
+              color: #ffffff;
+              background-position: 0 100%;
+            }
+            a {
+              color: inherit;
+              text-decoration: none;
+              font-weight: 800;
+              &:visited {
+                color: inherit;
+              }
+            }
+          }
+        }
+        @media screen and (max-width: $grid-breakpoints-md) {
+          display: none;
+        }
+      }
+
+      &#navbar-mobile {
+        @media screen and (min-width: $grid-breakpoints-md) {
+          display: none;
+        }
+      }
+    }
+  }
+}

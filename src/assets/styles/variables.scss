@@ -1,1 +1,13 @@
 $color_light: #ffffff;
+
+
+$grid-breakpoints-xs: 360px;
+$grid-breakpoints-sm: 576px;
+$grid-breakpoints-md: 768px;
+$grid-breakpoints-lg: 992px;
+$grid-breakpoints-xl: 1200px;
+$grid-breakpoints-xxl: 1400px;
+
+$color_main_menu: #303030;
+$color_main_menu_active: #ffffff;
+$color_main_menu_hover: $color_main_menu_active;

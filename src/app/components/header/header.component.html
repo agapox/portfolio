@@ -1,0 +1,23 @@
+<header id="header">
+  <div class="logo-container">
+    <img src="https://via.placeholder.com/150x50" alt="Agapox Logo">
+  </div>
+  <nav id="navbar" role="navigation" aria-label="Main">
+    <ul>
+      <li *ngFor="let nav of navbarItems" routerLinkActive="menu-active">
+        <a [routerLink]="[nav.url]">
+          {{ nav.name }}
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <nav id="navbar-mobile" role="navigation" aria-label="Main">
+    <ul>
+      <li *ngFor="let nav of navbarItems">
+        <a (click)="goTo(nav.url)" routerLinkActive="active">
+          {{ nav.name }}
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
