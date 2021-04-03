@@ -9,7 +9,7 @@
   padding-top: 70px;
 
   #about {
-    padding: 16px;
+
     color: $color-light;
 
     app-card {
@@ -102,43 +102,47 @@
           }
         }
 
-        .hobbies__list {
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr 1fr;
-          grid-gap: 32px;
-          @media screen and (max-width: $grid-breakpoints-xxl) {
-            grid-template-columns: 1fr 1fr 1fr;
-          }
-          @media screen and (max-width: $grid-breakpoints-lg) {
-            grid-template-columns: 1fr 1fr;
-          }
-          @media screen and (max-width: $grid-breakpoints-md) {
-            grid-template-columns: 1fr;
-            grid-gap: 16px;
-          }
+        &.hobbies {
+          background-color: darken($color_light, 10%);
+          padding: 32px 16px;
+          color: $color_font;
 
-          app-card {
-            // color: $color_light;
-            // $color2: #006fca;
-            // $color1: #2381b8;
-            // $angle: 120deg;
-            // background: rgb(27,71,168);
-            // background: -moz-linear-gradient($angle, $color1 0%, $color2 50%);
-            // background: -webkit-linear-gradient($angle, $color1 0%, $color2 50%);
-            // background: linear-gradient($angle, $color1 0%, $color2 50%);
-            // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1b47a8",endColorstr="#0c5d95",GradientType=1);
-            color: $color_dark;
-            margin-bottom: 1rem;
-            border: 3px solid #4c4593;
-
-            h5 {
-              margin: 0;
-              color: #4c4593;
+          .hobbies__list {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 32px;
+            @media screen and (max-width: $grid-breakpoints-xxl) {
+              grid-template-columns: 1fr 1fr 1fr;
+            }
+            @media screen and (max-width: $grid-breakpoints-lg) {
+              grid-template-columns: 1fr 1fr;
+            }
+            @media screen and (max-width: $grid-breakpoints-md) {
+              grid-template-columns: 1fr;
+              grid-gap: 16px;
             }
 
-            .hobby__img {
-              width: 100%;
-              height: auto;
+            app-card {
+              $color1: rgba(25,36,122,1);
+              $color2: rgba(30,73,148,1);
+              $color3: rgba(70,37,153,1);
+              $angle: 255deg;
+              background: rgba(25,36,122,1);
+              background: -moz-linear-gradient($angle, #{$color1} 0%, #{$color2} 42%, #{$color3} 100%);
+              background: -webkit-linear-gradient($angle, #{$color1} 0%, #{$color2} 42%, #{$color3} 100%);
+              background: linear-gradient($angle, #{$color1} 0%, #{$color2} 42%, #{$color3} 100%);
+              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#{$color1}",endColorstr="#{$color3}",GradientType=1);
+              color: $color_light;
+              margin-bottom: 1rem;
+
+              h5 {
+                margin: 0;
+              }
+
+              .hobby__img {
+                width: 100%;
+                height: auto;
+              }
             }
           }
         }

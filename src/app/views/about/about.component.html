@@ -1,10 +1,12 @@
 <app-header></app-header>
 <div id="about">
 
-  <h1 class="text-weight--light">
-    About me
-  </h1>
-  <div class="about__profile">
+  <div class="container">
+    <h1 class="text-weight--light">
+      About me
+    </h1>
+  </div>
+  <div class="about__profile container">
     <app-card class="about__profile__card">
       <div class="about__profile-img">
         <img src="https://media-exp1.licdn.com/dms/image/C4E03AQE2ZfGKPdxYvw/profile-displayphoto-shrink_800_800/0/1615221953948?e=1622678400&v=beta&t=YGXjXunsib3F3jMCQuzTh-4KBSD_HQXLSybpkDPmKuc" alt="Profile Picture">
@@ -26,17 +28,17 @@
       </div>
     </app-card>
   </div>
-  <div class="about__summary">
+  <div class="about__summary container">
     <app-card>
       <h3 class="text-weight--light">About me</h3>
       <p *ngFor="let description of profile.descriptions">{{ description }}</p>
     </app-card>
   </div>
   <div class="about__summary hobbies">
-    <app-card>
+    <div class="container">
       <h3 class="text-weight--light">Hobbies</h3>
       <div class="hobbies__list">
-        <app-card *ngFor="let hobby of profile.hobbies">
+        <app-card *ngFor="let hobby of profile.hobbies" bgColor="gradient-blue">
           <div>
             <h5 class="text-weight--regular">{{ hobby.name }}</h5>
             <p class="">{{ hobby.description }}</p>
@@ -44,6 +46,6 @@
           </div>
         </app-card>
       </div>
-    </app-card>
+    </div>
   </div>
 </div>
