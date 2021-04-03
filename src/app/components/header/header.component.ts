@@ -21,19 +21,19 @@ export class HeaderComponent implements OnInit {
     },
     {
       name: 'resume',
-      url: 'resume'
+      url: '/resume'
     },
     {
       name: 'skills',
-      url: 'skills'
+      url: '/skills'
     },
     {
       name: 'portfolio',
-      url: 'portfolio'
+      url: '/portfolio'
     },
     {
       name: 'contact',
-      url: 'contact'
+      url: '/contact'
     }
   ];
 
