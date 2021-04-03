@@ -1,3 +1,5 @@
+@import '../../../assets/styles/variables';
+
 :host {
   display: flex;
   flex-direction: column;
@@ -7,6 +9,140 @@
   padding-top: 70px;
 
   #about {
+    padding: 16px;
+    color: $color-light;
 
+    app-card {
+      margin-bottom: 2rem;
+    }
+    .about {
+      &__profile {
+        display: flex;
+
+        &__card {
+          color: $color-font;
+          background-color: $color-light;
+          // padding: 32px;
+          grid-template-columns: 150px 1fr;
+          grid-gap: 24px;
+          width: auto;
+          overflow: hidden;
+          @media screen and (max-width: $grid-breakpoints-md) {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 24px;
+          }
+
+          h5, p {
+            margin: 0 0 8px 0;
+          }
+
+        }
+        &-img {
+          overflow: hidden;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          background-color: #303030;
+          padding: 0 32px;
+          @media screen and (max-width: $grid-breakpoints-md) {
+            padding: 32px;
+            justify-content: center;
+            height: unset;
+            width: 100%;
+          }
+
+          img {
+            border: 3px solid #5e5e5e;
+            // box-shadow: 0 0 14px rgba(0, 0, 0, .4);
+            width: 150px;
+            height: auto;
+            border-radius: 50%;
+            -webkit-filter: grayscale(85%);
+            filter: grayscale(85%);
+          }
+        }
+        &-details {
+          padding: 32px 32px 32px 16px;
+
+          @media screen and (max-width: $grid-breakpoints-md) {
+            width: 100%;
+            padding: 0 24px 24px;
+          }
+
+          @media screen and (max-width: $grid-breakpoints-xs) {
+            width: 100%;
+            padding: 0 16px 16px;
+          }
+
+          .role {
+            em {
+              width: 18px;
+              margin-right: 8px;
+              color: #1f6fd4;
+            }
+          }
+        }
+      }
+      &__summary {
+        app-card {
+          color: $color-font;
+          background-color: $color-light;
+          padding: 32px;
+          display: block;
+
+          h3 {
+            margin-top: 0;
+          }
+
+          @media screen and (max-width: $grid-breakpoints-md) {
+            padding: 24px;
+          }
+          @media screen and (max-width: $grid-breakpoints-xs) {
+            padding: 16px;
+          }
+        }
+
+        .hobbies__list {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-gap: 32px;
+          @media screen and (max-width: $grid-breakpoints-xxl) {
+            grid-template-columns: 1fr 1fr 1fr;
+          }
+          @media screen and (max-width: $grid-breakpoints-lg) {
+            grid-template-columns: 1fr 1fr;
+          }
+          @media screen and (max-width: $grid-breakpoints-md) {
+            grid-template-columns: 1fr;
+            grid-gap: 16px;
+          }
+
+          app-card {
+            // color: $color_light;
+            // $color2: #006fca;
+            // $color1: #2381b8;
+            // $angle: 120deg;
+            // background: rgb(27,71,168);
+            // background: -moz-linear-gradient($angle, $color1 0%, $color2 50%);
+            // background: -webkit-linear-gradient($angle, $color1 0%, $color2 50%);
+            // background: linear-gradient($angle, $color1 0%, $color2 50%);
+            // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1b47a8",endColorstr="#0c5d95",GradientType=1);
+            color: $color_dark;
+            margin-bottom: 1rem;
+            border: 3px solid #4c4593;
+
+            h5 {
+              margin: 0;
+              color: #4c4593;
+            }
+
+            .hobby__img {
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
   }
 }

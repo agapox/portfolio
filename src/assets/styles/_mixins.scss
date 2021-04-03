@@ -1,0 +1,6 @@
+@mixin box-shadow-card() {
+  $shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  -webkit-box-shadow: $shadow;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    $shadow;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         $shadow;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}

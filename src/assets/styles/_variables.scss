@@ -1,4 +1,7 @@
 $color_light: #ffffff;
+$color_dark: #303030;
+
+$color-font: $color_dark;
 
 
 $grid-breakpoints-xs: 360px;
@@ -8,6 +11,6 @@ $grid-breakpoints-lg: 992px;
 $grid-breakpoints-xl: 1200px;
 $grid-breakpoints-xxl: 1400px;
 
-$color_main_menu: #303030;
-$color_main_menu_active: #ffffff;
-$color_main_menu_hover: $color_main_menu_active;
+$color_main_menu: $color_dark;
+$color_main_menu_active: $color_light;
+$color_main_menu_hover: $color_light;
