@@ -1,0 +1,30 @@
+<app-header></app-header>
+<div id="resume">
+  <div class="container">
+    <h1 class="text-weight--light">
+      Resume
+    </h1>
+  </div>
+  <div class="container">
+    <h3 class="text-weight--light">Work Experience</h3>
+    <div class="job__list" [@listAnimationUp]>
+      <div class="job__item" *ngFor="let job of experiences">
+        <app-card>
+          <div class="job__company">
+            <img [src]="job.company.img" [alt]="job.company.name">
+            <h4 class="text-weight--regular">{{ job.company.name }}</h4>
+          </div>
+          <div class="job__positions__list">
+            <div class="position__item" *ngFor="let pos of job.positions">
+              <h5 class="text-weight--semibold">{{ pos.name }}</h5>
+              <p>{{ pos.description }}</p>
+              <p class="text-weight--semibold">{{ pos.location }}</p>
+              <p>{{ pos.date.from }} - {{ pos.date.to }}. <span class="text-weight--semibold">{{ pos.date.duration }}</span></p>
+            </div>
+          </div>
+        </app-card>
+      </div>
+    </div>
+  </div>
+</div>
+

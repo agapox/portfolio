@@ -1,0 +1,76 @@
+@import '../../../assets/styles/variables';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  $colors: #dedede, #ffffff;
+  background: linear-gradient(-145deg, $colors) 0% 0%/100% 110%;
+  padding-top: 70px;
+
+  .job__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 32px;
+    @media screen and (max-width: $grid-breakpoints-lg) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  app-card {
+    padding: 32px;
+    $color: #d0d9ff;
+    border: 3px solid $color;
+    transition: border .3s ease-in-out;
+    background-color: $color_light;
+    &:hover {
+      border-color: darken($color, 15%);
+    }
+
+    @media screen and (max-width: $grid-breakpoints-sm) {
+      padding: 24px;
+    }
+
+    @media screen and (max-width: $grid-breakpoints-xs) {
+      padding: 24px 16px;
+    }
+  }
+
+  .job {
+    &__company {
+      $widthImg: 100px;
+      $widthImgSm:  60px;
+      display: grid;
+      grid-template-columns: #{$widthImg} 1fr;
+      grid-gap: 32px;
+
+      h4 {
+        margin: 0;
+        display: flex;
+        align-items: center;
+      }
+
+      @media screen and (max-width: $grid-breakpoints-sm) {
+        grid-template-columns: #{$widthImgSm} 1fr;
+      }
+
+      img {
+        border-radius: 2px;
+        max-width: $widthImg;
+        width: 100%;
+        transition: all .3s ease-in-out;
+        @media screen and (max-width: $grid-breakpoints-sm) {
+          max-width: $widthImgSm;
+        }
+      }
+    }
+  }
+  .position__item {
+    h5 {
+      margin: 16px 0 0 0;
+    }
+    p {
+      margin: 8px 0;
+    }
+  }
+}

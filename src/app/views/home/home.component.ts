@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { ListAnimationUpTrigger } from 'src/app/animations/listAnimations';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  animations: [ListAnimationUpTrigger]
 })
 export class HomeComponent implements OnInit {
 

@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ListAnimationleftTrigger } from 'src/app/animations/listAnimations';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+  styleUrls: ['./about.component.scss'],
+  animations: [ListAnimationleftTrigger]
 })
 export class AboutComponent implements OnInit {
 
@@ -61,7 +63,6 @@ export class AboutComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    console.log('holaaaa')
   }
 
 }

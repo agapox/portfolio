@@ -37,7 +37,7 @@
   <div class="about__summary hobbies">
     <div class="container">
       <h3 class="text-weight--light">Hobbies</h3>
-      <div class="hobbies__list">
+      <div class="hobbies__list" @listAnimationLeft>
         <app-card *ngFor="let hobby of profile.hobbies" bgColor="gradient-blue">
           <div>
             <h5 class="text-weight--regular">{{ hobby.name }}</h5>
