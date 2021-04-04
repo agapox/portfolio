@@ -1,0 +1,12 @@
+<app-header></app-header>
+<div id="contact" @listAnimationUp>
+  <h1 class="text-weight--light text-center">You can get in touch via</h1>
+  <div class="person__social-media text-center" *ngIf="socialMedia">
+    <a class="person__social-media__item color-light"
+      *ngFor="let item of socialMedia"
+      [href]="item.url"
+      target="_blank">
+      <em [class]="item.iconClass"></em>
+    </a>
+  </div>
+</div>

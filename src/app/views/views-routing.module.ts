@@ -14,11 +14,14 @@ const routes: Routes = [
   {
     path: 'about',
     loadChildren: () => import('./about/about.module').then(m => m.AboutModule)
-  }
-  ,
+  },
   {
     path: 'resume',
     loadChildren: () => import('./resume/resume.module').then(m => m.ResumeModule)
+  },
+  {
+    path: 'contact',
+    loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
   }
 ];
 
