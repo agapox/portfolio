@@ -49,22 +49,15 @@ export class HeaderComponent implements OnInit {
   @HostListener('document:load')
   @HostListener('document:scroll')
   onScroll() {
-    console.log('onScroll')
     this.headerChange = false;
     let bodyScrollTop = document.documentElement.scrollTop;
     if (bodyScrollTop > 30) {
-      console.log('entroo en el if')
       this.headerChange = true;
     }
   }
 
   toggleMobileMenu() {
     this.mobileMenuOpen = !this.mobileMenuOpen;
-    if (this.mobileMenuOpen) {
-      console.log("menú abierto")
-    } else {
-      console.log("menú cerrado")
-    }
   }
 
 }
