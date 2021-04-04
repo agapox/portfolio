@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
+  public headerChange = false;
 
   public mobileMenuOpen = false;
 
@@ -42,6 +44,18 @@ export class HeaderComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+  }
+
+  @HostListener('document:load')
+  @HostListener('document:scroll')
+  onScroll() {
+    console.log('onScroll')
+    this.headerChange = false;
+    let bodyScrollTop = document.documentElement.scrollTop;
+    if (bodyScrollTop > 30) {
+      console.log('entroo en el if')
+      this.headerChange = true;
+    }
   }
 
   toggleMobileMenu() {

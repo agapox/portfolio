@@ -4,16 +4,19 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     margin: 0;
     padding: 8px 16px;
-    background: rgba(77, 77, 77, 0.5);
     border-bottom: 1px solid rgb(255, 255, 255, .2);
     max-height: 70px;
+    position: fixed;
     z-index: 999;
+    transition: background-color .227s ease-out;
+    &.bg-on {
+      background-color: rgb(21 97 206 / 90%);
+    }
 
     nav {
       &#navbar {
