@@ -1,15 +1,16 @@
 $color_light: #ffffff;
 $color_dark: #303030;
+$primary_color: #1562ce;
 
-$color-font: $color_dark;
+$color_font: $color_dark;
 
 
-$grid-breakpoints-xs: 360px;
-$grid-breakpoints-sm: 576px;
-$grid-breakpoints-md: 768px;
-$grid-breakpoints-lg: 992px;
-$grid-breakpoints-xl: 1200px;
-$grid-breakpoints-xxl: 1400px;
+$grid_breakpoints_xs: 360px;
+$grid_breakpoints_sm: 576px;
+$grid_breakpoints_md: 768px;
+$grid_breakpoints_lg: 992px;
+$grid_breakpoints_xl: 1200px;
+$grid_breakpoints_xxl: 1400px;
 
 $color_main_menu: $color_dark;
 $color_main_menu_active: $color_light;

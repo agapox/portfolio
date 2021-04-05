@@ -20,14 +20,14 @@
         display: flex;
 
         &__card {
-          color: $color-font;
+          color: $color_font;
           background-color: $color-light;
           // padding: 32px;
           grid-template-columns: 150px 1fr;
           grid-gap: 24px;
           width: auto;
           overflow: hidden;
-          @media screen and (max-width: $grid-breakpoints-md) {
+          @media screen and (max-width: $grid_breakpoints_md) {
             grid-template-columns: 1fr 1fr;
             grid-gap: 24px;
           }
@@ -44,7 +44,7 @@
           align-items: center;
           background-color: #114a92;
           padding: 0 32px;
-          @media screen and (max-width: $grid-breakpoints-md) {
+          @media screen and (max-width: $grid_breakpoints_md) {
             padding: 32px;
             justify-content: center;
             height: unset;
@@ -64,12 +64,12 @@
         &-details {
           padding: 32px 32px 32px 16px;
 
-          @media screen and (max-width: $grid-breakpoints-md) {
+          @media screen and (max-width: $grid_breakpoints_md) {
             width: 100%;
             padding: 0 24px 24px;
           }
 
-          @media screen and (max-width: $grid-breakpoints-xs) {
+          @media screen and (max-width: $grid_breakpoints_xs) {
             width: 100%;
             padding: 0 16px 16px;
           }
@@ -85,7 +85,7 @@
       }
       &__summary {
         app-card {
-          color: $color-font;
+          color: $color_font;
           background-color: $color-light;
           padding: 32px;
           display: block;
@@ -94,10 +94,10 @@
             margin-top: 0;
           }
 
-          @media screen and (max-width: $grid-breakpoints-md) {
+          @media screen and (max-width: $grid_breakpoints_md) {
             padding: 24px;
           }
-          @media screen and (max-width: $grid-breakpoints-xs) {
+          @media screen and (max-width: $grid_breakpoints_xs) {
             padding: 16px;
           }
         }
@@ -111,29 +111,32 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-gap: 32px;
-            @media screen and (max-width: $grid-breakpoints-xxl) {
+            @media screen and (max-width: $grid_breakpoints_xxl) {
               grid-template-columns: 1fr 1fr 1fr;
             }
-            @media screen and (max-width: $grid-breakpoints-lg) {
+            @media screen and (max-width: $grid_breakpoints_lg) {
               grid-template-columns: 1fr 1fr;
             }
-            @media screen and (max-width: $grid-breakpoints-md) {
+            @media screen and (max-width: $grid_breakpoints_md) {
               grid-template-columns: 1fr;
               grid-gap: 16px;
             }
 
             app-card {
-              $color1: rgba(25,36,122,1);
-              $color2: rgba(30,73,148,1);
-              $color3: rgba(70,37,153,1);
-              $angle: 255deg;
-              background: rgba(25,36,122,1);
-              background: -moz-linear-gradient($angle, #{$color1} 0%, #{$color2} 42%, #{$color3} 100%);
-              background: -webkit-linear-gradient($angle, #{$color1} 0%, #{$color2} 42%, #{$color3} 100%);
-              background: linear-gradient($angle, #{$color1} 0%, #{$color2} 42%, #{$color3} 100%);
-              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#{$color1}",endColorstr="#{$color3}",GradientType=1);
-              color: $color_light;
-              margin-bottom: 1rem;
+              // // $color1: rgba(25,36,122,1);
+              // // $color2: rgba(30,73,148,1);
+              // // $color3: rgba(70,37,153,1);
+              // // //$angle: 255deg;
+              // // $angle: 215deg;
+              // // background: rgba(25,36,122,1);
+              // // background: -moz-linear-gradient($angle, #{$color1} 0%, #{$color2} 42%, #{$color3} 100%);
+              // // background: -webkit-linear-gradient($angle, #{$color1} 0%, #{$color2} 42%, #{$color3} 100%);
+              // // background: linear-gradient($angle, #{$color1} 0%, #{$color2} 42%, #{$color3} 100%);
+              // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#{$color1}",endColorstr="#{$color3}",GradientType=1);
+              // color: $color_light;
+              background-color: $color_light;
+              color: $color_font;
+              margin-bottom: 0;
 
               h5 {
                 margin: 0;
@@ -142,6 +145,7 @@
               .hobby__img {
                 width: 100%;
                 height: auto;
+                border-radius: 2px;
               }
             }
           }

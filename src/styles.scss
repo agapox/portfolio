@@ -18,7 +18,41 @@ body {
   padding-right: 16px;
   margin: auto;
   max-width: 1400px;
-  @media screen and (max-width: $grid-breakpoints-xxl) {
+  @media screen and (max-width: $grid_breakpoints_xxl) {
     max-width: 1200px;
+  }
+}
+
+.btn {
+  color: $color_dark;
+  display: inline-block;
+  padding: 6px 16px 10px 16px;
+  background-color: #dedede;
+  border: 2px solid $color_dark;
+  border-radius: 4px;
+  font-weight: 600;
+  overflow: hidden;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  $animDet: .2s ease-in-out;
+  box-shadow: 0 5px 25px 0 rgb(0, 0, 0, .1);
+  transition: background-color #{$animDet}, border-color #{$animDet}, color #{$animDet}, box-shadow #{$animDet};
+  &-primary {
+    color: $color_light;
+    background-color: $primary_color;
+    border-color: $primary_color;
+    &:hover {
+      background-color: lighten($primary_color, 15%);
+      box-shadow: 0 4px 10px 0 rgba($primary_color, .3);
+    }
+    &--outline {
+      color: $primary_color;
+      border-color: $primary_color;
+      background-color: transparent;
+      &:hover {
+        box-shadow: 0 4px 10px 0 rgba($primary_color, .3);
+      }
+    }
   }
 }

@@ -69,17 +69,25 @@ p {
   @include font-size-transition;
 }
 
-.text-weight {
-  &--light {
-    font-weight: 300;
+.text {
+  &-weight {
+    $weights: (light: 300, regular: 400, semibold: 600, bold: 700);
+
+    @each $key, $val in $weights {
+      &--#{$key} {
+        font-weight: $val;
+      }
+    }
   }
-  &--regular {
-    font-weight: 400;
+
+  &-size {
+    $sizes: (xs: 12, sm: 14, md: 16, regular: 18, lg: 20, xl: 24, xxl: 28);
+    @each $key, $val in $sizes {
+      &--#{$key} {
+        font-size: #{$val}px;
+        line-height: #{$val*1.2}px;
+      }
+    }
   }
-  &--semibold {
-    font-weight: 600;
-  }
-  &--bold {
-    font-weight: 700;
-  }
+
 }

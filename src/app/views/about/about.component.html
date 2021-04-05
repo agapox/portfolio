@@ -40,7 +40,7 @@
       <div class="hobbies__list" @listAnimationLeft>
         <app-card *ngFor="let hobby of profile.hobbies" bgColor="gradient-blue">
           <div>
-            <h5 class="text-weight--regular">{{ hobby.name }}</h5>
+            <h5 class="text-weight--bold">{{ hobby.name }}</h5>
             <p class="">{{ hobby.description }}</p>
             <img class="hobby__img" [src]="hobby.gif" [alt]="hobby.name">
           </div>

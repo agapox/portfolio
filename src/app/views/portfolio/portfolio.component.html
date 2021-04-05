@@ -1,0 +1,47 @@
+<app-header></app-header>
+<div id="portfolio">
+  <div class="container">
+    <h1 class="text-weight--light color-light">Portfolio</h1>
+  </div>
+
+  <div class="container">
+    <div class="portfolio__list" @listAnimationLeft (@listAnimationLeft.done)="listAnimDone()">
+
+      <app-card
+        id="portfolio-{{i}}"
+        class="portfolio__item"
+        *ngFor="let port of portfolio; let i = index">
+        <div
+          class="portfolio__item-img"
+          [@bgImageZoomInAnimation]="startBgImgAnim"
+          [style]="'background-image: url(' + port.img + ')'">
+          <div *ngIf="!startBgImgAnim" [ngClass]="{'loading': !startBgImgAnim}"></div>
+          <div *ngIf="startBgImgAnim">
+            <h4 class="portfolio__item-title color-light">{{ port.name }}</h4>
+          </div>
+        </div>
+
+        <div class="portfolio__item-info">
+
+          <div class="tech__list">
+            <app-badge
+              *ngFor="let tech of port.tech"
+              class="badge text-size--xs text-weight--bold"
+              stroke="gray"
+              [text]="tech"></app-badge>
+          </div>
+
+          <div class="description__list">
+            <p class="text-size--sm" *ngFor="let desc of port.description">{{ desc }}</p>
+          </div>
+
+          <div class="action__container text-right">
+            <!-- <a class="btn btn-primary--outline" (click)="moreDetails(i)">More details</a> -->
+            <a class="btn btn-primary" [href]="port.url" target="_blank">Go to project</a>
+          </div>
+
+        </div>
+      </app-card>
+    </div>
+  </div>
+</div>
