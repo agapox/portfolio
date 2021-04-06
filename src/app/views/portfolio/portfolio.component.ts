@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ListAnimationleftTrigger, BgImageZoomInAnimationTrigger } from 'src/app/animations/listAnimations';
 
 interface Portfolio {
-  img: string,
+  img: {
+    url: string,
+    loaded: boolean
+  },
   name: string,
   tech: string[],
   description: string[],
@@ -20,7 +23,7 @@ export class PortfolioComponent implements OnInit {
   portfolio: Portfolio[] = [];
   portfolioSelected: number = -1;
 
-  public startBgImgAnim = false
+  public startBgImgAnim = false;
 
   constructor() { }
 
@@ -30,7 +33,10 @@ export class PortfolioComponent implements OnInit {
 
   getData() {
     this.portfolio.push({
-      img: 'https://placeimg.com/500/400/any',
+      img: {
+        url: 'https://placeimg.com/500/400/any',
+        loaded: false
+      },
       name: 'Proyecto 1',
       tech: [
         'Angular', 'JavaScript', 'NodeJS', 'RxJS', 'NGXS', 'UX/UI', 'HTML', 'CSS', 'SASS'
@@ -44,7 +50,10 @@ export class PortfolioComponent implements OnInit {
       url: 'https:www.google.com'
     });
     this.portfolio.push({
-      img: 'https://placeimg.com/500/403/any',
+      img: {
+        url: 'https://placeimg.com/500/401/any',
+        loaded: false
+      },
       name: 'Proyecto 2',
       tech: [
         'Angular', 'JavaScript', 'NodeJS', 'RxJS', 'NGXS', 'UX/UI', 'HTML', 'CSS', 'SASS'
@@ -58,7 +67,10 @@ export class PortfolioComponent implements OnInit {
       url: 'https:www.google.com'
     });
     this.portfolio.push({
-      img: 'https://placeimg.com/500/401/any',
+      img: {
+        url: 'https://placeimg.com/500/402/any',
+        loaded: false
+      },
       name: 'Proyecto 3',
       tech: [
         'Angular', 'JavaScript', 'NodeJS', 'RxJS', 'NGXS', 'UX/UI', 'HTML', 'CSS', 'SASS'
@@ -72,7 +84,10 @@ export class PortfolioComponent implements OnInit {
       url: 'https:www.google.com'
     });
     this.portfolio.push({
-      img: 'https://placeimg.com/500/402/any',
+      img: {
+        url: 'https://placeimg.com/500/403/any',
+        loaded: false
+      },
       name: 'Proyecto 4',
       tech: [
         'Angular', 'JavaScript', 'NodeJS', 'RxJS', 'NGXS', 'UX/UI', 'HTML', 'CSS', 'SASS'
@@ -85,7 +100,17 @@ export class PortfolioComponent implements OnInit {
       ],
       url: 'https:www.google.com'
     });
+    this.loadedBgImg();
+  }
 
+  loadedBgImg() {
+    this.portfolio.forEach(el => {
+      const img = new Image();
+      img.src = el.img.url;
+      img.addEventListener('load', () => {
+        el.img.loaded = true;
+      });
+    });
   }
 
   listAnimDone() {

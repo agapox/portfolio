@@ -33,7 +33,7 @@ export const ListAnimationleftTrigger = trigger('listAnimationLeft', [
 export const BgImageZoomInAnimationTrigger = trigger('bgImageZoomInAnimation', [
   transition('false => true', [ // each time the binding value changes
     style({ backgroundSize: '120%', opacity: 0 }),
-    animate('.227s ease-in-out', keyframes([
+    animate('.37s ease-in-out', keyframes([
       style({ backgroundSize: '120%', opacity: 1 }),
       style({ backgroundSize: '100% auto', opacity: 1 })
     ]))

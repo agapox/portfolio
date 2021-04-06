@@ -13,10 +13,10 @@
         *ngFor="let port of portfolio; let i = index">
         <div
           class="portfolio__item-img"
-          [@bgImageZoomInAnimation]="startBgImgAnim"
-          [style]="'background-image: url(' + port.img + ')'">
-          <div *ngIf="!startBgImgAnim" [ngClass]="{'loading': !startBgImgAnim}"></div>
-          <div *ngIf="startBgImgAnim">
+          [@bgImageZoomInAnimation]="startBgImgAnim && port.img.loaded"
+          [style]="'background-image: url(' + port.img.url + ')'">
+          <div *ngIf="!port.img.loaded" [ngClass]="{'loading': !port.img.loaded}"></div>
+          <div *ngIf="port.img.loaded">
             <h4 class="portfolio__item-title color-light">{{ port.name }}</h4>
           </div>
         </div>
