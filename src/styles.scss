@@ -4,10 +4,12 @@
 @import './assets/styles/helpers';
 @import './assets/styles/mixins';
 
-* {
+*, *::before, *::after {
+  box-sizing: border-box;
   box-sizing: border-box;
 }
-h1, h2, h3, h4, h5, h6, p, span, em {
+
+div, h1, h2, h3, h4, h5, h6, p, span, em {
   color: #303030;
 }
 

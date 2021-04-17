@@ -20,13 +20,17 @@ const routes: Routes = [
     loadChildren: () => import('./resume/resume.module').then(m => m.ResumeModule)
   },
   {
-    path: 'contact',
-    loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
+    path: 'skills',
+    loadChildren: () => import('./skills/skills.module').then(m => m.SkillsModule)
   },
   {
     path: 'portfolio',
     loadChildren: () => import('./portfolio/portfolio.module').then(m => m.PortfolioModule)
-  }
+  },
+  {
+    path: 'contact',
+    loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
+  },
 ];
 
 @NgModule({
