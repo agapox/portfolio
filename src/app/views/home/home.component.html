@@ -7,7 +7,11 @@
     <h4 class="person__ocupations text-center color-light">{{ person.ocupations.join(' | ') }}</h4>
 
     <div class="person__fields" *ngIf="person.fields">
-      <div class="badge field color-light text-weight--semibold" *ngFor="let field of person.fields">{{ field }}</div>
+      <app-badge
+        *ngFor="let field of person.fields"
+        [text]="field"
+        [type]="badgeType">
+      </app-badge>
     </div>
 
     <!-- <div *ngIf="person.descriptions" class="person__description">

@@ -1,4 +1,9 @@
+@import '../../../assets/styles/';
+
 :host {
+  $color_white: #ffffff;
+  $color_default: #3b3b3b;
+  $color_blue: #00556e;
   display: inline-flex;
   @mixin fontStyles {
     font-size: inherit;
@@ -9,14 +14,50 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    padding: 2px 12px 3px;
-    border: 2px solid #dedede;
-    border-radius: 500px;
+    text-align: center;
+    padding: 1px 16px 2px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: transparent;
+    font-size: 14px;
+    margin: 4px;
+    border-radius: 200px;
+    font-weight: 600;
+    @media screen and (max-width: $grid_breakpoints_sm) {
+      font-size: 12px;
+    }
 
-    @include fontStyles();
+    &.badge {
+      &-default {
+        color: $color_white;
+        background-color: $color_default;
+        border-color: $color_white;
+      }
+      &-white {
+        color: $color_default;
+        background-color: $color_white;
+        border-color: $color_default;
+      }
+      &-blue {
+        color: $color_white;
+        background-color: $color_blue;
+        border-color: $color_white;
+      }
+      &-o-white {
+        color: $color_white;
+        background-color: transparent;
+        border-color: $color_white;
+      }
+      &-o-blue {
+        color: $color_blue;
+        background-color: transparent;
+        border-color: $color_blue;
+      }
+    }
 
     span {
       @include fontStyles();
+      color: inherit;
     }
   }
 }

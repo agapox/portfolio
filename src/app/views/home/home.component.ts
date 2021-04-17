@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ListAnimationUpTrigger } from 'src/app/animations/listAnimations';
+import { BadgeType } from 'src/app/components/badge/badge.component';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +9,8 @@ import { ListAnimationUpTrigger } from 'src/app/animations/listAnimations';
   animations: [ListAnimationUpTrigger]
 })
 export class HomeComponent implements OnInit {
+
+  badgeType: BadgeType = BadgeType.outlineWhite;
 
   person = {
     name: 'José Agapito Ramírez',
