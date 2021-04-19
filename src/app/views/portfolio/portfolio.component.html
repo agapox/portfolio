@@ -26,8 +26,7 @@
           <div class="tech__list">
             <app-badge
               *ngFor="let tech of port.tech"
-              class="badge text-size--xs text-weight--bold"
-              stroke="gray"
+              [type]="badgeType"
               [text]="tech"></app-badge>
           </div>
 

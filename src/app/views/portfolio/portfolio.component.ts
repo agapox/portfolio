@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ListAnimationleftTrigger, BgImageZoomInAnimationTrigger } from 'src/app/animations/listAnimations';
+import { BadgeType } from 'src/app/components/badge/badge.component';
 
 interface Portfolio {
   img: {
@@ -22,6 +23,7 @@ export class PortfolioComponent implements OnInit {
 
   portfolio: Portfolio[] = [];
   portfolioSelected: number = -1;
+  badgeType: BadgeType = BadgeType.outlineBlue;
 
   public startBgImgAnim = false;
 
