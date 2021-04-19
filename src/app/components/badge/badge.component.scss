@@ -56,7 +56,10 @@
     }
 
     span {
-      @include fontStyles();
+      font-family: 'Comfortaa', cursive;
+      font-weight: 700;
+      font-size: 12px;
+      padding: 3px 0 1px 0;
       color: inherit;
     }
   }
