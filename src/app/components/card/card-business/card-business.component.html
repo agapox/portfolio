@@ -1,0 +1,31 @@
+<app-card class="card__business">
+  <div class="card__business__cont">
+    <div class="card__business__img">
+      <img [src]="profile.picture" alt="Profile Picture">
+    </div>
+    <div class="card__business__details">
+      <h5 class="card__business__name">{{ profile.name }}</h5>
+      <p class="card__business__location">
+        <em class="fas fa-map-marker-alt"></em>
+        Santiago, Chile.
+      </p>
+      <div class="card__business__roles">
+        <p
+          *ngFor="let role of profile.roles"
+          class="text-weight--semibold  role">
+          {{ role.name }}
+        </p>
+      </div>
+      <p>
+      </p>
+    </div>
+  </div>
+  <div class="card__business__footer" *ngIf="false">
+    <div class="card__business__skills">
+      <h6 class="title text-center">Skills</h6>
+      <ul>
+        <li class="skill" *ngFor="let skill of profile.skills">{{ skill }}</li>
+      </ul>
+    </div>
+  </div>
+</app-card>

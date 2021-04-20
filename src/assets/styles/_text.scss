@@ -3,6 +3,10 @@
   font-family: 'Sarabun', sans-serif;
 }
 
+em {
+  font-family: "Font Awesome 5 Free";
+}
+
 @mixin font-size-transition {
   transition: font-size .2s ease-in-out;
 }
@@ -70,6 +74,15 @@ p {
 }
 
 .text {
+  &-color {
+    $weights: (light: $color_light, dark: $color_dark, primary: $color_primary);
+
+    @each $key, $val in $weights {
+      &--#{$key} {
+        color: $val;
+      }
+    }
+  }
   &-weight {
     $weights: (light: 300, regular: 400, semibold: 600, bold: 700);
 

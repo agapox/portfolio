@@ -15,7 +15,7 @@
     z-index: 999;
     transition: background-color .227s ease-out;
     &.bg-on {
-      background-color: rgba($primary_color, .9);
+      background-color: rgba($color_primary, .9);
     }
 
     .logo {

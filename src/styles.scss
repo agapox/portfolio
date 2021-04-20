@@ -42,18 +42,18 @@ body {
   transition: background-color #{$animDet}, border-color #{$animDet}, color #{$animDet}, box-shadow #{$animDet};
   &-primary {
     color: $color_light;
-    background-color: $primary_color;
-    border-color: $primary_color;
+    background-color: $color_primary;
+    border-color: $color_primary;
     &:hover {
-      background-color: lighten($primary_color, 15%);
-      box-shadow: 0 4px 10px 0 rgba($primary_color, .3);
+      background-color: lighten($color_primary, 15%);
+      box-shadow: 0 4px 10px 0 rgba($color_primary, .3);
     }
     &--outline {
-      color: $primary_color;
-      border-color: $primary_color;
+      color: $color_primary;
+      border-color: $color_primary;
       background-color: transparent;
       &:hover {
-        box-shadow: 0 4px 10px 0 rgba($primary_color, .3);
+        box-shadow: 0 4px 10px 0 rgba($color_primary, .3);
       }
     }
   }

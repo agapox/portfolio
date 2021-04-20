@@ -16,73 +16,7 @@
       margin-bottom: 2rem;
     }
     .about {
-      &__profile {
-        display: flex;
 
-        &__card {
-          color: $color_font;
-          background-color: $color-light;
-          // padding: 32px;
-          grid-template-columns: 150px 1fr;
-          grid-gap: 24px;
-          width: auto;
-          overflow: hidden;
-          @media screen and (max-width: $grid_breakpoints_md) {
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 24px;
-          }
-
-          h5, p {
-            margin: 0 0 8px 0;
-          }
-
-        }
-        &-img {
-          overflow: hidden;
-          height: 100%;
-          display: flex;
-          align-items: center;
-          background-color: #114a92;
-          padding: 0 32px;
-          @media screen and (max-width: $grid_breakpoints_md) {
-            padding: 32px;
-            justify-content: center;
-            height: unset;
-            width: 100%;
-          }
-
-          img {
-            border: 3px solid #1b3284;
-            // box-shadow: 0 0 14px rgba(0, 0, 0, .4);
-            width: 150px;
-            height: auto;
-            border-radius: 50%;
-            -webkit-filter: saturate(0.6);
-            filter: saturate(0.6);
-          }
-        }
-        &-details {
-          padding: 32px 32px 32px 16px;
-
-          @media screen and (max-width: $grid_breakpoints_md) {
-            width: 100%;
-            padding: 0 24px 24px;
-          }
-
-          @media screen and (max-width: $grid_breakpoints_xs) {
-            width: 100%;
-            padding: 0 16px 16px;
-          }
-
-          .role {
-            em {
-              width: 18px;
-              margin-right: 8px;
-              color: #1f6fd4;
-            }
-          }
-        }
-      }
       &__summary {
         app-card {
           color: $color_font;
