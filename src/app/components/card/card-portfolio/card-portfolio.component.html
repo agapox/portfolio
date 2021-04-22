@@ -1,0 +1,57 @@
+<app-card class="card__portfolio">
+  <div
+    class="card__portfolio__img"
+    [style]="'background-image: url(' + portfolio.img.url + ')'">
+    <div *ngIf="!portfolio.img.loaded" [ngClass]="{'loading': !portfolio.img.loaded}"></div>
+    <div *ngIf="portfolio.img.loaded">
+      <h4 class="card__portfolio__title color-light">{{ portfolio.name }}</h4>
+    </div>
+  </div>
+  <div class="card__portfolio__tech-list">
+    <div
+      class="card__portfolio__tech-item"
+      *ngFor="let tech of portfolio.tech"
+      [innerHtml]="sanitizer.bypassSecurityTrustHtml(tech)">
+    </div>
+    <!-- <app-badge
+      *ngFor="let tech of portfolio.tech"
+      [type]="badgeType"
+      [text]="tech"></app-badge> -->
+  </div>
+  <div class="card__portfolio__description">
+    <p class="text-size--md" *ngFor="let desc of portfolio.description">{{ desc }}</p>
+  </div>
+  <div class="card__portfolio__actions text-right">
+    <a class="btn btn-primary--outline github">
+      GitHub
+    </a>
+    <!-- <a class="btn btn-primary--outline" (click)="moreDetails(i)">More details</a> -->
+    <a class="btn btn-primary" [href]="portfolio.url" target="_blank">Live project</a>
+  </div>
+</app-card>
+
+<!-- <ng-container >
+  <app-card
+    id="portfolio-{{i}}"
+    class="portfolio__item"
+    *ngIf="port.show">
+    <div class="portfolio__item__top">
+      <div
+        class="portfolio__item-img"
+        [@bgImageZoomInAnimation]="startBgImgAnim && port.img.loaded"
+        [style]="'background-image: url(' + port.img.url + ')'">
+        <div *ngIf="!port.img.loaded" [ngClass]="{'loading': !port.img.loaded}"></div>
+        <div *ngIf="port.img.loaded">
+          <h4 class="portfolio__item-title color-light">{{ port.name }}</h4>
+        </div>
+      </div>
+
+      <div class="tech__list">
+        <app-badge
+          *ngFor="let tech of port.tech"
+          [type]="badgeType"
+          [text]="tech"></app-badge>
+      </div>
+    </div>
+  </app-card>
+</ng-container> -->
