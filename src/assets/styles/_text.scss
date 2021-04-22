@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Sarabun:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+
 * {
-  font-family: 'Sarabun', sans-serif;
+  font-family: $font_family_main;
 }
 
 em {
-  font-family: "Font Awesome 5 Free";
+  font-family: $font_family_fa;
+  &.fab {
+    font-family: $font_family_fab;
+  }
 }
 
 @mixin font-size-transition {
