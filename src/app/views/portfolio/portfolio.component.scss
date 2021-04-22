@@ -1,11 +1,15 @@
 @import '../../../assets/styles/variables';
 
+:host-context(body) {
+  $colors: #008bff, #53418c;
+  background: linear-gradient(136deg, $colors) 0% 0%/100% 110%;
+}
+
 :host {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  $colors: #008bff, #53418c;
-  background: linear-gradient(136deg, $colors) 0% 0%/100% 110%;
+
   padding-top: 70px;
 
   .portfolio {
@@ -24,7 +28,7 @@
       background-color: $color_light;
       overflow: hidden;
       max-width: 450px;
-      margin: auto;
+      margin: 0 auto;
 
       &-img {
         width: 100%;

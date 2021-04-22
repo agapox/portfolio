@@ -1,17 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ListAnimationleftTrigger, BgImageZoomInAnimationTrigger } from 'src/app/animations/listAnimations';
 import { BadgeType } from 'src/app/components/badge/badge.component';
+import { Portfolio } from 'src/app/components/card/card-portfolio/card-portfolio.component';
+import { ICONSTOOLS } from 'src/assets/icons/icons.svg';
 
-interface Portfolio {
-  img: {
-    url: string,
-    loaded: boolean
-  },
-  name: string,
-  tech: string[],
-  description: string[],
-  url: string
-}
 
 @Component({
   selector: 'app-portfolio',
@@ -20,6 +12,8 @@ interface Portfolio {
   animations: [ListAnimationleftTrigger, BgImageZoomInAnimationTrigger]
 })
 export class PortfolioComponent implements OnInit {
+
+  iconTools = ICONSTOOLS;
 
   portfolio: Portfolio[] = [];
   portfolioSelected: number = -1;
@@ -35,70 +29,90 @@ export class PortfolioComponent implements OnInit {
 
   getData() {
     this.portfolio.push({
+      show: true,
       img: {
         url: 'https://placeimg.com/500/400/any',
         loaded: false
       },
       name: 'Proyecto 1',
       tech: [
-        'Angular', 'JavaScript', 'NodeJS', 'RxJS', 'NGXS', 'UX/UI', 'HTML', 'CSS', 'SASS'
+        this.iconTools.HTML,
+        this.iconTools.CSS,
+        this.iconTools.SASS,
+        this.iconTools.ANGULAR,
+        this.iconTools.JAVASCRIPT,
+        this.iconTools.JASMINE2,
+        this.iconTools.KARMA
       ],
       description: [
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat porro perferendis obcaecati quos ullam possimus laudantium id eveniet et autem?',
-        'Porro, architecto reprehenderit. Ab ratione suscipit alias a harum laudantium.',
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat porro perferendis obcaecati quos ullam possimus laudantium id eveniet et autem?',
-        'Porro, architecto reprehenderit. Ab ratione suscipit alias a harum laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat porro perferendis obcaecati quos ullam possimus laudantium id eveniet et autem?'
+        'Lorem ipsum dolor sit amet consectetur.',
+        'Adipisicing elit placeat porro perferendis obcaecati quos.',
+        'ullam possimus laudantium id eveniet et autem?',
       ],
       url: 'https:www.google.com'
     });
     this.portfolio.push({
+      show: true,
       img: {
         url: 'https://placeimg.com/500/401/any',
         loaded: false
       },
       name: 'Proyecto 2',
       tech: [
-        'Angular', 'JavaScript', 'NodeJS', 'RxJS', 'NGXS', 'UX/UI', 'HTML', 'CSS', 'SASS'
+        this.iconTools.HTML,
+        this.iconTools.CSS,
+        this.iconTools.SASS,
+        this.iconTools.REACT,
+        this.iconTools.NODEJS,
       ],
       description: [
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat porro perferendis obcaecati quos ullam possimus laudantium id eveniet et autem?',
         'Porro, architecto reprehenderit. Ab ratione suscipit alias a harum laudantium.',
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat porro perferendis obcaecati quos ullam possimus laudantium id eveniet et autem?',
-        'Porro, architecto reprehenderit. Ab ratione suscipit alias a harum laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat porro perferendis obcaecati quos ullam possimus laudantium id eveniet et autem?'
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat porro perferendis.',
+        'Perferendis obcaecati quos ullam possimus laudantium id eveniet et autem?',
       ],
       url: 'https:www.google.com'
     });
     this.portfolio.push({
+      show: true,
       img: {
         url: 'https://placeimg.com/500/402/any',
         loaded: false
       },
       name: 'Proyecto 3',
       tech: [
-        'Angular', 'JavaScript', 'NodeJS', 'RxJS', 'NGXS', 'UX/UI', 'HTML', 'CSS', 'SASS'
+        this.iconTools.HTML,
+        this.iconTools.CSS,
+        this.iconTools.SASS,
+        this.iconTools.ANGULAR,
+        this.iconTools.JAVASCRIPT,
+        this.iconTools.JASMINE2
       ],
       description: [
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat porro perferendis obcaecati quos ullam possimus laudantium id eveniet et autem?',
-        'Porro, architecto reprehenderit. Ab ratione suscipit alias a harum laudantium.',
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat porro perferendis obcaecati quos ullam possimus laudantium id eveniet et autem?',
-        'Porro, architecto reprehenderit. Ab ratione suscipit alias a harum laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat porro perferendis obcaecati quos ullam possimus laudantium id eveniet et autem?'
+        'Placeat porro perferendis obcaecati quos ullam possimus laudantium id eveniet et autem?',
+        'Porro, architecto reprehenderit. Ab ratione suscipit alias a harum laudantium.'
       ],
       url: 'https:www.google.com'
     });
     this.portfolio.push({
+      show: true,
       img: {
         url: 'https://placeimg.com/500/403/any',
         loaded: false
       },
       name: 'Proyecto 4',
       tech: [
-        'Angular', 'JavaScript', 'NodeJS', 'RxJS', 'NGXS', 'UX/UI', 'HTML', 'CSS', 'SASS'
+        this.iconTools.HTML,
+        this.iconTools.CSS,
+        this.iconTools.SASS,
+        this.iconTools.ANGULAR,
+        this.iconTools.JAVASCRIPT,
+        this.iconTools.JASMINE2
       ],
       description: [
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat porro perferendis obcaecati quos ullam possimus laudantium id eveniet et autem?',
+        'Obcaecati quos ullam possimus laudantium id eveniet et autem? Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         'Porro, architecto reprehenderit. Ab ratione suscipit alias a harum laudantium.',
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat porro perferendis obcaecati quos ullam possimus laudantium id eveniet et autem?',
-        'Porro, architecto reprehenderit. Ab ratione suscipit alias a harum laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat porro perferendis obcaecati quos ullam possimus laudantium id eveniet et autem?'
+        'Possimus laudantium id eveniet et autem? Ab ratione suscipit alias a harum laudantium. ',
+        'Porro, architecto reprehenderit. Placeat porro perferendis obcaecati quos ullam possimus laudantium id eveniet et autem?'
       ],
       url: 'https:www.google.com'
     });
