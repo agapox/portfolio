@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { CardComponent } from './card/card.component';
 import { BadgeComponent } from './badge/badge.component';
 import { CardBusinessComponent } from './card/card-business/card-business.component';
+import { CardPortfolioComponent } from './card/card-portfolio/card-portfolio.component';
 
 
 
@@ -13,7 +14,8 @@ import { CardBusinessComponent } from './card/card-business/card-business.compon
     HeaderComponent,
     CardComponent,
     BadgeComponent,
-    CardBusinessComponent
+    CardBusinessComponent,
+    CardPortfolioComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +25,8 @@ import { CardBusinessComponent } from './card/card-business/card-business.compon
     HeaderComponent,
     CardComponent,
     BadgeComponent,
-    CardBusinessComponent
+    CardBusinessComponent,
+    CardPortfolioComponent
   ]
 })
 export class ComponentsModule { }
