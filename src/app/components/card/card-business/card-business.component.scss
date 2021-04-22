@@ -62,7 +62,7 @@
       .role {
         margin: 0 0 2px 0;
         text-align: center;
-        font-family: 'Comfortaa';
+        font-family: $font_family_alt;
         font-size: 14px;
         font-weight: 700;
         color: #888888;
@@ -85,7 +85,7 @@
       }
       .skill {
         display: inline-flex;
-        font-family: 'Comfortaa', cursive;
+        font-family: $font_family_alt;
         font-size: 14px;
         color: #8d8d8d;
         font-weight: 700;
