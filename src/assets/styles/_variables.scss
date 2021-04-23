@@ -1,6 +1,6 @@
 // COLORS
 $color_light: #ffffff;
-$color_dark: #303030;
+$color_dark: #464646;
 $color_primary: #1562ce;
 
 $color_font: $color_dark;
@@ -10,7 +10,12 @@ $color_main_menu_active: $color_light;
 $color_main_menu_hover: $color_light;
 
 // FAMILY FONTS
-$font_family_main: 'Sarabun', sans-serif;
+/*
+  font-family: 'Nunito', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Rubik', sans-serif;
+*/
+$font_family_main: 'Rubik', sans-serif;
 $font_family_alt: 'Comfortaa', cursive;
 $font_family_fab: 'Font Awesome 5 Brands';
 $font_family_fa: 'Font Awesome 5 Free';

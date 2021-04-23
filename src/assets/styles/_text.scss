@@ -1,8 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Sarabun:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+/*
+ *  GOOGLE FONTS
+ *  Comfortaa, Sarabun
+ *  Ubuntu
+ *  Nunuto
+ *  Noto Sans
+ *  Rubik
+ *  Quicksand
+*/
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap');
 
 * {
   font-family: $font_family_main;
 }
+
+div, h1, h2, h3, h4, h5, h6, p, span, em {
+  color: $color_font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  &.main-title {
+    font-family: $font_family_alt;
+  }
+}
+
 
 em {
   font-family: $font_family_fa;
@@ -79,9 +99,9 @@ p {
 
 .text {
   &-color {
-    $weights: (light: $color_light, dark: $color_dark, primary: $color_primary);
+    $colors: (light: $color_light, dark: $color_font, primary: $color_primary);
 
-    @each $key, $val in $weights {
+    @each $key, $val in $colors {
       &--#{$key} {
         color: $val;
       }

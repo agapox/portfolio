@@ -6,10 +6,6 @@
   box-sizing: border-box;
 }
 
-div, h1, h2, h3, h4, h5, h6, p, span, em {
-  color: #303030;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -26,7 +22,7 @@ body {
 }
 
 .btn {
-  color: $color_dark;
+  color: $color_font;
   display: inline-block;
   padding: 6px 16px 10px 16px;
   background-color: #dedede;
