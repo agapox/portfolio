@@ -1,0 +1,13 @@
+<app-card class="card-hobby">
+  <div class="card-hobby__img">
+    <img class="hobby__img" [src]="hobby.gif" [alt]="hobby.name">
+  </div>
+  <div class="card-hobby__container">
+    <div class="card-hobby__title">
+      <h5 class="text-weight--bold">{{ hobby.name }}</h5>
+    </div>
+    <div class="card-hobby__text">
+      <p class="">{{ hobby.description }}</p>
+    </div>
+  </div>
+</app-card>
