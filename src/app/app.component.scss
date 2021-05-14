@@ -39,9 +39,9 @@
     }
 
     .main-container {
-      $button-padding: 3rem;
-      min-height: calc(100vh - #{$header_height + $footer_height} - #{$button-padding});
-      padding-bottom: $button-padding;
+      $el_padding: 3rem;
+      min-height: calc(100vh - #{$header_height + $footer_height} - #{$el_padding});
+      margin-bottom: $el_padding;
     }
 
     app-footer {
