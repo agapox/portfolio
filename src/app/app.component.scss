@@ -4,6 +4,7 @@
   display: block;
   #container-wrapper {
     min-height: 100vh;
+    width: 100%;
 
     &.page {
       &-home {
@@ -24,12 +25,12 @@
         }
       }
       &-about, &-skills, &-contact {
-        $colors: #008bff, #53418c;
+        $colors: #008bff, #211741;
         background: linear-gradient(136deg, $colors) 0% 0%/100% 110%;
       }
       &-resume, &-portfolio {
-        $colors: #53418c, #008bff;
-        background: linear-gradient(136deg, $colors) 0% 0%/200% 210%;
+        $colors: #008bff, #0a395f;
+        background: linear-gradient(136deg, $colors) 0% 0%/140% 120%;
       }
     }
 
@@ -39,6 +40,7 @@
     }
 
     .main-container {
+      width: 100%;
       $el_padding: 3rem;
       min-height: calc(100vh - #{$header_height + $footer_height} - #{$el_padding});
       margin-bottom: $el_padding;
