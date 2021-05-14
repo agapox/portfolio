@@ -1,56 +1,42 @@
-#home {
-  padding-top: 70px;
-  $colors: rgb(68, 132, 206), rgb(26, 215, 192), rgb(255, 155, 17), rgb(155, 89, 182), rgb(255, 127, 127), rgb(124, 77, 124);
-  display: flex;
-  background: linear-gradient(136deg, $colors) 0% 0% / 1200% 1200%;
-  animation: bgAnimation 70s ease infinite;
+:host {
+  min-height: inherit;
+  #home {
+    display: flex;
+    min-height: inherit;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
 
-  align-items: center;
-  justify-content: center;
-  flex-flow: column;
-  min-height: 100vh;
-
-  .person {
-    &__details {
-      max-width: 700px;
-      width: 90%;
-      margin-top: -120px;
-    }
-    &__name {
-      margin-bottom: 16px;
-      font-weight: 300;
-    }
-    &__ocupations {
-      margin-top: 0;
-    }
-    &__fields {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    &__social-media {
-      margin-top: 2rem;
-      a {
-        &:visited {
-          color: inherit;
-
-          em {
+    .person {
+      &__details {
+        max-width: 700px;
+        width: 90%;
+        margin-top: -120px;
+      }
+      &__name {
+        margin-bottom: 16px;
+        font-weight: 300;
+      }
+      &__ocupations {
+        margin-top: 0;
+      }
+      &__fields {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      &__social-media {
+        margin-top: 2rem;
+        a {
+          &:visited {
             color: inherit;
+
+            em {
+              color: inherit;
+            }
           }
         }
       }
-    }
-  }
-
-  @keyframes bgAnimation {
-    0% {
-      background-position: 0 7%
-    }
-    50% {
-      background-position: 100% 94%
-    }
-    100% {
-      background-position: 0 7%
     }
   }
 }

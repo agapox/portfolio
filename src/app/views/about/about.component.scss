@@ -3,10 +3,6 @@
 :host {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  $colors: #008bff, #53418c;
-  background: linear-gradient(136deg, $colors) 0% 0%/100% 110%;
-  padding-top: 70px;
 
   #about {
 
@@ -18,6 +14,13 @@
     .about {
 
       &__summary {
+
+        &.description {
+          padding-top: 3rem;
+          padding-bottom: 4rem;
+          background-color: #f4f4f4;
+        }
+
         app-card {
           color: $color_font;
           background-color: $color-light;
@@ -37,50 +40,30 @@
         }
 
         &.hobbies {
-          background-color: darken($color_light, 10%);
-          padding: 32px 16px;
-          color: $color_font;
+          padding-top: 32px;
+          padding-bottom: 32px;
 
           .hobbies__list {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-gap: 32px;
+            // display: grid;
+            // grid-template-columns: repeat(4, 1fr);
+            // grid-template-rows: masonry;
+            // grid-gap: 32px;
+
+            column-count: 4;
+            column-gap: 32px;
+
             @media screen and (max-width: $grid_breakpoints_xxl) {
-              grid-template-columns: 1fr 1fr 1fr;
+              // grid-template-columns: repeat(3, 1fr);
+              column-count: 3;
             }
             @media screen and (max-width: $grid_breakpoints_lg) {
-              grid-template-columns: 1fr 1fr;
+              // grid-template-columns: repeat(2, 1fr);
+              column-count: 2;
             }
-            @media screen and (max-width: $grid_breakpoints_md) {
-              grid-template-columns: 1fr;
-              grid-gap: 16px;
-            }
-
-            app-card {
-              // // $color1: rgba(25,36,122,1);
-              // // $color2: rgba(30,73,148,1);
-              // // $color3: rgba(70,37,153,1);
-              // // //$angle: 255deg;
-              // // $angle: 215deg;
-              // // background: rgba(25,36,122,1);
-              // // background: -moz-linear-gradient($angle, #{$color1} 0%, #{$color2} 42%, #{$color3} 100%);
-              // // background: -webkit-linear-gradient($angle, #{$color1} 0%, #{$color2} 42%, #{$color3} 100%);
-              // // background: linear-gradient($angle, #{$color1} 0%, #{$color2} 42%, #{$color3} 100%);
-              // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#{$color1}",endColorstr="#{$color3}",GradientType=1);
-              // color: $color_light;
-              background-color: $color_light;
-              color: $color_font;
-              margin-bottom: 0;
-
-              h5 {
-                margin: 0;
-              }
-
-              .hobby__img {
-                width: 100%;
-                height: auto;
-                border-radius: 2px;
-              }
+            @media screen and (max-width: $grid_breakpoints_sm) {
+              // grid-template-columns: 1fr;
+              column-count: 1;
+              column-gap: 16px;
             }
           }
         }

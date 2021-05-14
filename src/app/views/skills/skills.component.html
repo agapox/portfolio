@@ -1,4 +1,3 @@
-<app-header></app-header>
 <div id="skills">
   <div class="container">
     <h1 class="text-weight--light color-light">Skills</h1>
@@ -6,10 +5,9 @@
 
   <div class="container">
     <app-card class="tech-evo__list">
-      <div class="tech-evo__item" *ngFor="let item of techEvoList">
-        <div class="tech-evo__label text-weight--bold">
-          {{ item.label }}
-        </div>
+
+      <div class="graph" #graph>
+        <figure id="scatter"></figure>
       </div>
     </app-card>
   </div>

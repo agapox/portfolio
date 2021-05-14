@@ -1,32 +1,28 @@
-<app-header></app-header>
 <div id="about">
 
   <div class="container">
-    <h1 class="text-weight--light color-light">
-      About me
+    <h1 class="text-weight--light color-light main-title">
+      About
     </h1>
   </div>
   <div class="about__profile container">
     <app-card-business></app-card-business>
   </div>
-  <div class="about__summary container">
-    <app-card>
-      <h3 class="text-weight--light">About me</h3>
-      <p *ngFor="let description of profile.descriptions">{{ description }}</p>
-    </app-card>
-  </div>
-  <div class="about__summary hobbies">
+  <div class="about__summary description">
     <div class="container">
-      <h3 class="text-weight--light">Hobbies</h3>
-      <div class="hobbies__list" @listAnimationLeft>
-        <app-card *ngFor="let hobby of profile.hobbies" bgColor="gradient-blue">
-          <div>
-            <h5 class="text-weight--bold">{{ hobby.name }}</h5>
-            <p class="">{{ hobby.description }}</p>
-            <img class="hobby__img" [src]="hobby.gif" [alt]="hobby.name">
-          </div>
-        </app-card>
-      </div>
+      <h2 class="text-weight--light text-color--dark main-title">I am ...</h2>
+      <app-card>
+        <p *ngFor="let description of profile.descriptions">{{ description }}</p>
+      </app-card>
+    </div>
+  </div>
+  <div class="about__summary hobbies container">
+    <h2 class="text-weight--light text-color--light main-title">Hobbies</h2>
+    <div class="hobbies__list" @listAnimationLeft>
+      <app-card-hobbies
+        [hobby]="hobby"
+        *ngFor="let hobby of profile.hobbies">
+      </app-card-hobbies>
     </div>
   </div>
 </div>

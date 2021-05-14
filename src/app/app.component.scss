@@ -1,0 +1,52 @@
+@import '../assets/styles/variables';
+
+:host {
+  display: block;
+  #container-wrapper {
+    min-height: 100vh;
+
+    &.page {
+      &-home {
+        $colors: rgb(68, 132, 206), rgb(26, 215, 192), rgb(255, 155, 17), rgb(155, 89, 182), rgb(255, 127, 127), rgb(124, 77, 124);
+        background: linear-gradient(136deg, $colors) 0% 0% / 1200% 1200%;
+        animation: bgAnimation 70s ease infinite;
+
+        @keyframes bgAnimation {
+          0% {
+            background-position: 0 7%
+          }
+          50% {
+            background-position: 100% 94%
+          }
+          100% {
+            background-position: 0 7%
+          }
+        }
+      }
+      &-about, &-skills, &-contact {
+        $colors: #008bff, #53418c;
+        background: linear-gradient(136deg, $colors) 0% 0%/100% 110%;
+      }
+      &-resume, &-portfolio {
+        $colors: #53418c, #008bff;
+        background: linear-gradient(136deg, $colors) 0% 0%/200% 210%;
+      }
+    }
+
+    app-header {
+      display: block;
+      height: $header_height;
+    }
+
+    .main-container {
+      $button-padding: 3rem;
+      min-height: calc(100vh - #{$header_height + $footer_height} - #{$button-padding});
+      padding-bottom: $button-padding;
+    }
+
+    app-footer {
+      display: block;
+      height: $footer_height;
+    }
+  }
+}

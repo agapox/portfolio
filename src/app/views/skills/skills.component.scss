@@ -3,10 +3,6 @@
 :host {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  $colors: #53418c, #008bff;
-  background: linear-gradient(136deg, $colors) 0% 0%/200% 210%;
-  padding-top: 70px;
 
   .tech-evo {
     &__list {
@@ -18,5 +14,16 @@
       padding: 32px;
     }
 
+  }
+
+  svg {
+    padding: 4px;
+    width: 100%;
+    min-height: 300px;
+    height: auto;
+    .axis {
+      stroke: #252525;
+      stroke-width: 4px;
+    }
   }
 }

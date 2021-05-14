@@ -3,12 +3,10 @@
 :host {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   justify-content: center;
   align-items: center;
-  $colors: #008bff, #53418c;
-  background: linear-gradient(136deg, $colors) 0% 0%/100% 110%;
-  padding-top: 70px;
+  height: 100%;
+
 
   h1 {
     color: $color_light;

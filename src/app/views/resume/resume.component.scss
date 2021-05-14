@@ -3,10 +3,6 @@
 :host {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  $colors: #dedede, #ffffff;
-  background: linear-gradient(-145deg, $colors) 0% 0%/100% 110%;
-  padding-top: 70px;
 
   .job__list {
     display: grid;

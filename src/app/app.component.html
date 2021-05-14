@@ -1,1 +1,7 @@
-<router-outlet></router-outlet>
+<div id="container-wrapper" [ngClass]="'page-' + currentView">
+  <app-header></app-header>
+  <div class="main-container">
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer></app-footer>
+</div>
