@@ -10,19 +10,21 @@
   </div>
   <div class="about__summary description">
     <div class="container">
-      <h2 class="text-weight--light text-color--dark main-title">I am ...</h2>
       <app-card>
+        <h2 class="text-weight--light text-color--dark main-title">I am ...</h2>
         <p *ngFor="let description of profile.descriptions">{{ description }}</p>
       </app-card>
     </div>
   </div>
-  <div class="about__summary hobbies container">
-    <h2 class="text-weight--light text-color--light main-title">Hobbies</h2>
-    <div class="hobbies__list" @listAnimationLeft>
-      <app-card-hobbies
-        [hobby]="hobby"
-        *ngFor="let hobby of profile.hobbies">
-      </app-card-hobbies>
+  <div class="about__summary hobbies">
+    <div class="container">
+      <h2 class="text-weight--light text-color--light main-title">Hobbies</h2>
+      <div class="hobbies__list" @listAnimationLeft>
+        <app-card-hobbies
+          [hobby]="hobby"
+          *ngFor="let hobby of profile.hobbies">
+        </app-card-hobbies>
+      </div>
     </div>
   </div>
 </div>

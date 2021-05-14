@@ -18,7 +18,6 @@
         &.description {
           padding-top: 3rem;
           padding-bottom: 4rem;
-          background-color: #f4f4f4;
         }
 
         app-card {
@@ -42,6 +41,9 @@
         &.hobbies {
           padding-top: 32px;
           padding-bottom: 32px;
+          background-color: #1b1d5b;
+          margin-bottom: -3rem;
+          padding-bottom: 6rem;
 
           .hobbies__list {
             // display: grid;

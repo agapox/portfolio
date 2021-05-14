@@ -17,7 +17,8 @@
     background: linear-gradient(-45deg, rgba(25,9,51,1) 0%, rgba(9,10,37,1) 50%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#190933",endColorstr="#090a25",GradientType=1);
     color: $color_font;
-    color: #533589;
+    $color_card_font: #bbacd6;
+    color: $color_card_font;
     margin-bottom: 0;
     padding: 0;
     overflow: hidden;
@@ -31,12 +32,12 @@
       width: 100%;
       h5 {
         margin: 0;
-        color: #533589;
+        color: $color_card_font;
       }
     }
 
     p {
-      color: #533589;
+      color: $color_card_font;
     }
 
     .hobby__img {
